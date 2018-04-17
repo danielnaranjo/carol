@@ -179,6 +179,10 @@ return [
 
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Bogardo\Mailgun\MailgunServiceProvider::class,
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+
 
     ],
 
@@ -231,6 +235,13 @@ return [
 
         'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Mailgun' => Bogardo\Mailgun\Facades\Mailgun::class,
+        'Date' => Jenssegers\Date\Date::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
+
     ],
 
 ];
