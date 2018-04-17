@@ -9,7 +9,14 @@
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
-        "sentry/sentry-laravel": "^0.8.0"
+        "sentry/sentry-laravel": "^0.8.0",
+        "bogardo/mailgun": "^5.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "jenssegers/date": "^3.2",
+        "laravelcollective/html": "^5.4.0",
+        "pusher/pusher-php-server": "~2.6",
+        "srmklive/paypal": "~1.0",
+        "webpatser/laravel-uuid": "2.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
