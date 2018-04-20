@@ -19,8 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('productos', 'ProductController');
-Route::resource('invoices', 'InvoicesController');
+Route::resource('invoices', 'InvoiceController');
 Route::resource('referidos', 'ReferralController');
+Route::resource('compras', 'HistoryController');
+Route::get('miscompras/{id}', 'HistoryController@filtrar');
+
 
 // OAuth Routes
 // Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');

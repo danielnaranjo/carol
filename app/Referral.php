@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Referral extends Model
 {
-    //
+    protected $table = 'referal';
+    protected $primaryKey = 'id';
+
 }
