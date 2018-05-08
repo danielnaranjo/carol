@@ -7,19 +7,22 @@
 			prop="details.name"
 			label="Producto"></el-table-column>
 		<el-table-column
-			label="Precio">
+			label="USD">
 			<template slot-scope='scope'>
-				{{ scope.row.details.price | dolares }}
+				{{ scope.row.details.price | usd }}
 			</template>
 		</el-table-column>
+        <el-table-column
+			prop="details.weight"
+			label="Peso"></el-table-column>
 		<el-table-column
 			prop="quantity"
-			label="Cantidad"></el-table-column>
+			label="Cant."></el-table-column>
 		<el-table-column
     		label="">
     		<template slot-scope="scope">
-    			<el-button type="success" icon="plus" @click='addToCart(scope.row.details)' size="mini"></el-button>
-    			<el-button type="danger" icon="minus" @click='removeFromCart(scope.row.details.sku)' size="mini"></el-button>
+    			<i class="el-icon-plus" @click='addToCart(scope.row.details)'></i>
+    			<i class="el-icon-minus" @click='removeFromCart(scope.row.details.sku)'></i>
     		</template>
     	</el-table-column>
 	</el-table>
@@ -35,6 +38,9 @@ export default {
 		},
         totalCost(){
           return Store.totalCost
+        },
+        pesoTotal(){
+          return Store.pesoTotal
         }
 	},
 	methods: {
