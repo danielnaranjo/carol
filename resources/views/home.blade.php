@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
@@ -19,5 +19,16 @@
             </div>
         </div>
     </div>
+    @if (Auth::check())
+    <div class="row">
+        <div class="col-md-7">
+            <product-list></product-list>
+        </div>
+        <div class="col-md-5">
+            <shopping-cart></shopping-cart>
+            <total-cost></total-cost>
+        </div>
+    </div>
+    @endif
 </div>
 @endsection

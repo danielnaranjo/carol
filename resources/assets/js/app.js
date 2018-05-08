@@ -5,7 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+//require('./bootstrap');
+import Element from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
+import 'element-ui/lib/theme-default/index.css'
 
 window.Vue = require('vue');
 
@@ -15,7 +18,20 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Services
+Vue.use(Element, { locale })
+
+Vue.component('TotalCost', require('./components/TotalCost.vue'));
+Vue.component('ProductList', require('./components/ProductList.vue'));
+Vue.component('ShoppingCart', require('./components/ShoppingCart.vue'));
+
+// Filters
+Vue.filter('dolares', function (value) {
+    return 'USD $' + parseFloat(value).toFixed(2);
+});
+Vue.filter('pesos', function (value) {
+    return 'ARS $' + parseFloat(value * 23).toFixed(2);
+});
 
 const app = new Vue({
     el: '#app'
