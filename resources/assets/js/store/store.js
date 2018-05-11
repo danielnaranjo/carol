@@ -17,7 +17,7 @@ export const Store = new Vue({
 		},
         pesoTotal(){
 			return this.cart.reduce((accum, product) => {
-				return accum + product.details.weight * product.quantity
+				return accum + product.details.weight * product.quantity;
 			}, 0)
 		}
 	},

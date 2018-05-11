@@ -5,7 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 import Element from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
 import 'element-ui/lib/theme-default/index.css'
@@ -27,17 +27,17 @@ Vue.component('ShoppingCart', require('./components/ShoppingCart.vue'));
 Vue.component('PesoCarga', require('./components/PesoCarga.vue'));
 
 // Filters
-Vue.filter('usd', function (value) {
-    return '$' + parseFloat(value).toFixed(2);
+Vue.filter("usd", function (value) {
+    return "$" + parseFloat(value).toFixed(2);
 });
-Vue.filter('dolares', function (value) {
-    return 'USD $' + parseFloat(value).toFixed(2);
+Vue.filter("dolares", function (value) {
+    return "USD $" + parseFloat(value).toFixed(2);
 });
-Vue.filter('pesos', function (value) {
-    return 'ARS $' + parseFloat(value * 23).toFixed(2);
+Vue.filter("pesos", function (value) {
+    return "ARS $" + parseFloat(value * 23).toFixed(2);
 });
-Vue.filter('gramos', function (value) {
-    return parseFloat(value)+ ' grs';
+Vue.filter("gramos", function (value) {
+    return parseFloat(value).toFixed(3)+ " grs";
 });
 
 const app = new Vue({
